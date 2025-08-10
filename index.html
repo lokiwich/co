@@ -105,13 +105,13 @@
         </div>
     </main>
 
-    <footer class="w-full p-4 flex justify-center items-center gap-4">
+    <footer class="w-full p-4 flex justify-center items-center gap-4 mb-8">
         <div id="footer-buttons" class="flex items-center gap-4 transition-all duration-500">
-            <button id="toggle-notes-btn" class="px-6 py-3 font-bold rounded-lg bg-blue-600 hover:bg-blue-500 flex items-center gap-2">
+            <button id="toggle-notes-btn" class="px-6 py-3 font-bold rounded-lg text-xs  bg-blue-600 hover:bg-blue-500 flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
                 نمایش نوت‌ها
             </button>
-            <button id="scoreboard-btn" class="px-6 py-3 font-bold rounded-lg bg-amber-600 hover:bg-amber-500 flex items-center gap-2">
+            <button id="scoreboard-btn" class="px-6 py-3 font-bold rounded-lg  text-xs bg-amber-600 hover:bg-amber-500 flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
                 جدول امتیازات
             </button>
@@ -236,7 +236,7 @@
                 <div class="flex justify-center items-start gap-6 mb-8">
                     ${appData.presets.map(p => `
                         <div class="flex flex-col items-center gap-3">
-                            <button data-time="${p.time}" data-gradient="${p.gradient}" data-category="${p.id}" class="timer-btn flex items-center justify-center w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-${p.gradient}-400 to-${p.gradient}-600 text-white text-3xl font-bold shadow-lg hover:scale-105 transition-transform">${formatTime(p.time)}</button>
+                            <button data-time="${p.time}" data-gradient="${p.gradient}" data-category="${p.id}" class="timer-btn flex items-center justify-center w-20 h-20 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-${p.gradient}-400 to-${p.gradient}-600 text-white text-xl font-bold shadow-lg hover:scale-105 transition-transform">${formatTime(p.time)}</button>
                             <span class="text-gray-400">${p.label}</span>
                         </div>
                     `).join('')}
